@@ -1,0 +1,12 @@
+Alpine Linux
+Dokerfile >> setup.sh
+Build all images needed
+Kubernetes web dashbord
+Load Balancer -> able to redirect directly to all services
+	it should be the only entry point for the cluster(MetalLb)
+WordPress -> 1 admin & *users / its own nginx server 
+phpMyAdmin ->  its own nginx server 
+FTPS server
+Grafana
+InfluxDB and Telegraf
+SSH
