@@ -10,3 +10,12 @@ FTPS server
 Grafana
 InfluxDB and Telegraf
 SSH
+Yaml
+
+
+docker-machine start default
+docker-machine env  default
+eval $(docker-machine env default)
+docker build -t nginx .
+docker run -p 80:80 /sh
+vi etc/nginx/nginx.conf
