@@ -12,7 +12,10 @@ InfluxDB and Telegraf
 SSH
 Yaml
 
-
+-> nginx (ssl + ssh + redirection + reverse proxy)
+-> wordpress -> phpmyadmin -> mysql
+-> grafan + influx + telegraph
+-> ftps
 
 docker-machine start default
 docker-machine env  default
@@ -20,3 +23,30 @@ eval $(docker-machine env default)
 docker build -t nginx .
 docker run -it -p 80:80 test /bin/sh
 vi etc/nginx/nginx.conf
+
+remove default --> dockermachine rm <name>
+docker-machine create --driver virtualbox <name>
+rc-status
+rc-service nginx start
+	* You are attempting to run an openrc service on a
+	* system which openrc did not boot.
+	* You may be inside a chroot or you may have used
+	* another initialization system to boot this system.
+	* In this situation, you will get unpredictable results!
+	* If you really want to do this, issue the following command:
+	* touch /run/openrc/softlevel
+	* ERROR: nginx failed to start
+cd ~/run/openrc/
+touch softlevel
+rc-status
+	Runlevel: sysinit
+	Dynamic Runlevel: hotplugged
+	Dynamic Runlevel: needed/wanted
+	Dynamic Runlevel: manual
+
+
+docker build -t nginx . --no-cache
+docker run -p 80:80 -it nginx \sh
+nginx -s reload
+
+https://www.programmersought.com/article/31191158164/
