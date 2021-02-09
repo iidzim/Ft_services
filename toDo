@@ -55,3 +55,11 @@ docker-machine ip default
 rc-status
 rc-update
 rc-service nginx start
+
+error:
+machine does not exist
+Error checking TLS connection: machine does not exist
+how to fix it ?
+-> docker-machine rm default
+-> docker-machine create default --driver virtualbox
+
