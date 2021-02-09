@@ -21,7 +21,7 @@ docker-machine start default
 docker-machine env  default
 eval $(docker-machine env default)
 docker build -t nginx .
-docker run -it -p 80:80 test /bin/sh
+docker run -it -p 80:80 nginx /bin/sh
 vi etc/nginx/nginx.conf
 
 remove default --> dockermachine rm <name>
@@ -50,3 +50,8 @@ docker run -p 80:80 -it nginx \sh
 nginx -s reload
 
 https://www.programmersought.com/article/31191158164/
+docker-machine ip default
+
+rc-status
+rc-update
+rc-service nginx start

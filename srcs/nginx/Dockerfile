@@ -6,6 +6,9 @@ RUN apk update && apk add \
     nginx 
 
 EXPOSE 80 443 
-COPY  ./nginx.conf /etc/nginx/nginx.conf
-RUN mkdir -p /run/nginx/
+
+
+
+#  COPY  ./nginx.conf /etc/nginx/nginx.conf
+# RUN mkdir -p /run/nginx
 CMD ["nginx", "-g", "daemon off;"]
