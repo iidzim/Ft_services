@@ -1,15 +1,7 @@
 FROM alpine:latest
-RUN apk update && apk add \
-    vim \
-    nginx\
-    curl \
-    openrc \
-	openssl \
-	openssh-server 
-
+RUN apk update
+RUN apk add vim nginx curl openrc openssl openssh-server 
 EXPOSE 80 443 
-
-# COPY  ./nginx.conf /etc/nginx/nginx.conf
 COPY  ./default.conf /etc/nginx/conf.d/default.conf
 COPY ./index.html /var/www/
 RUN mkdir -p /run/nginx
