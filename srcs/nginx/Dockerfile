@@ -1,5 +1,5 @@
 FROM alpine:latest
-RUN apk update
+RUN apk updatej
 RUN apk add vim nginx curl openrc openssl openssh-server 
 EXPOSE 80 443 
 COPY  ./default.conf /etc/nginx/conf.d/default.conf

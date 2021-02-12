@@ -63,3 +63,30 @@ how to fix it ?
 -> docker-machine rm default
 -> docker-machine create default --driver virtualbox
 
+
+------------------
+  23 rc-service php-fpm7 restart
+  24 apk add mariadb
+  25 ls
+  26 rc-service mariadb start
+  27 /etc/init.d/mariadb setup
+  28 rc-service mariadb start
+  29 mysql
+  30 apk add mariadb-client
+  31 mysql
+  32 mysql -e "CREATE USER 'ikram'@'localhost' IDENTIFIED BY '1234';"
+******  32 mysql -e "CREATE USER 'ikram'@'%' IDENTIFIED BY '1234';"  --> % : clusterIp
+  33 mysql -u ikram -p1234
+  34 "
+  35 mysql -e "GRANT ALL  PRIVILEGES"
+  36 mysql -e "GRANT ALL  PRIVILEGES ON *.* TO 'ikram'%'localhost';"
+  37 mysql -e "GRANT ALL  PRIVILEGES ON *.* TO 'ikram'@'localhost';"
+  38 vim /var/www/html/wp-config.php
+  39 netstat -nplt
+  40 netstat -n
+  41 vim /etc/my.cnf
+  42 vim /etc/my.cnf.d/mariadb-server.cnf
+  43 rc-service mariadb restart
+  44 netstat -nplt
+  45 vim /var/www/html/wp-config.php
+  ---------------
