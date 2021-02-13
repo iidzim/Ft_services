@@ -90,3 +90,7 @@ how to fix it ?
   44 netstat -nplt
   45 vim /var/www/html/wp-config.php
   ---------------
+
+  Datadir '/var/lib/mysql' is empty or invalid.
+  Run '/etc/init.d/mariadb setup' to create new database.
+  mysql -u ikram -p1234 -h 192.168.99.124
