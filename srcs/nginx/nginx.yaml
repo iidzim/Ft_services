@@ -1,0 +1,49 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:     #specification dor deployment 
+  replicas: 1
+  selector:   #The .spec.selector field defines how the Deployment finds which Pods to manage
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:   #specification for pods
+      containers:
+      - name: nginx
+        image: nginx_image
+        imagePullPolicy: Never
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80 #http
+        - containerPort: 443 #https
+        - containerPort: 22 #ssh
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    app: nginx
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  - name: https
+    port: 443
+    protocol: TCP
+    targetPort: 443
+  - name: ssh
+    port: 22
+    protocol: TCP
+    targetPort: 22

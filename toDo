@@ -94,3 +94,32 @@ how to fix it ?
   Datadir '/var/lib/mysql' is empty or invalid.
   Run '/etc/init.d/mariadb setup' to create new database.
   mysql -u ikram -p1234 -h 192.168.99.124
+
+  ********************
+ 1041  minikube delete
+ 1042  minikube start --driver=virtualbox
+ 1043  eval $(minikube docker-env)
+ 1044  docker images
+
+ minikube ssh
+  eval $(minikube docker-env)
+
+   1100  eval $(minikube docker-env)
+ 1101  pwd
+ 1102  ls
+ 1103  cd ..
+ 1104  ls
+ 1105  cd nginx
+ 1106  ls
+ 1107  docker build -t nginx_image  .
+ 1108  kubectl apply -f nginx.yaml 
+ 1109  minikube dashboard 
+ 1110  kubectl delete -f nginx.yaml
+ 1111  kubectl apply -f nginx.yaml 
+ 1112  minikube dashboard 
+ 1113  kubectl delete srv -all
+ 1114  kubectl delete srv --all
+ 1115  kubectl delete  ppod  --all
+ 1116  kubectl delete  pod  --all
+ 1117  minikube
+ 1118  minikube dashboard 
