@@ -14,7 +14,7 @@ spec:     #specification dor deployment
     spec:   #specification for pods
       containers:
       - name: nginx
-        image: nginx_image
+        image: nginx
         imagePullPolicy: Never
         resources:
           limits:
@@ -32,6 +32,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
+  type: LoadBalancer
   selector:
     app: nginx
   ports:

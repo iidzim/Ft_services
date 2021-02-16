@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: phpmyadmin
-        image: phpmyadmin-image
+        image: phpmyadmin
         imagePullPolicy: Never
         resources:
           limits:
@@ -30,6 +30,7 @@ kind: Service
 metadata:
   name: phpmyadmin-service
 spec:
+  type: LoadBalancer
   selector:
     app: phpmyadmin
   ports:

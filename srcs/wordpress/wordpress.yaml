@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: wordpress
-        image: wordpress-image
+        image: wordpress
         imagePullPolicy: Never
         resources:
           limits:
@@ -28,8 +28,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: wordpress-service
+  name: wordpress
 spec:
+  type: LoadBalancer
   selector:
     app: wordpress
   ports:

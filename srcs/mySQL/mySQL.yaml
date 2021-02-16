@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: mysql-image
+        image: mysql
         imagePullPolicy: Never
         resources:
           limits:
@@ -33,5 +33,8 @@ spec:
   selector:
     app: mySQL
   ports:
-  - port: 3306
+  - name: mysql
+    protocol: TCP
+    port: 3306
     targetPort: 3306
+  type: ClusterIP
