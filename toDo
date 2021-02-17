@@ -119,7 +119,6 @@ how to fix it ?
  1112  minikube dashboard 
  1113  kubectl delete srv -all
  1114  kubectl delete srv --all
- 1115  kubectl delete  ppod  --all
  1116  kubectl delete  pod  --all
  1117  minikube
  1118  minikube dashboard 
