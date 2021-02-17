@@ -30,6 +30,8 @@ kind: Service
 metadata:
   name: wordpress
   annotations:
+    #It is possible to share the same Load Balancer across multiple
+    #services as long as the services do not use the same ports
     metallb.universe.tf/allow-shared-ip: shared
 spec:
   type: LoadBalancer

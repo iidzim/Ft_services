@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mysql-deployment
 spec:
-  replicas: 
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
@@ -31,11 +31,12 @@ metadata:
   name: mysql-service
 spec:
   selector:
-    app: mySQL
+    app: mysql
   ports:
   - name: mysql
     protocol: TCP
     port: 3306
     targetPort: 3306
   type: ClusterIP
-  #ClusterIP: ip @
+  ClusterIP: 10.104.173.197
+

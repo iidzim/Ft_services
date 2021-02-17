@@ -7,4 +7,5 @@ mysql -e "CREATE DATABASE db;"
 mysql -e "FLUSH PRIVILEGES;"
 mysql -e "GRANT ALL PRIVILEGES ON *.* TO 'ikram'@'%';"
 rc-service mariadb restart
-/bin/sh
+# /bin/sh
+sleep infinity
