@@ -13,9 +13,9 @@ SSH
 Yaml
 
 -> nginx (ssl + ssh + redirection + reverse proxy)
--> wordpress -> phpmyadmin -> mysql
--> grafan + influx + telegraph
--> ftps
+-> WordPress -> phpMyAdmin -> mySQL
+-> Grafana + InfluxDB + Telegraf
+-> FTPS
 
 docker-machine start default
 docker-machine env  default
