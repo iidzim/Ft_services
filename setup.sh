@@ -9,6 +9,7 @@ docker build -t nginx ./srcs/nginx/
 docker build -t phpmyadmin ./srcs/phpmyadmin/
 docker build -t wordpress ./srcs/wordpress/
 docker build -t mysql ./srcs/mysql/
+docker build -t influxdb ./srcs/influxdb/
 
 kubectl apply -f ./srcs/nginx/nginx.yaml
 kubectl apply -f ./srcs/phpmyadmin/phpmyadmin.yaml
