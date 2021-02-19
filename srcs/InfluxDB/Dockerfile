@@ -1,5 +1,7 @@
 FROM alpine:3.11
-EXPOSE 8086
+# 8086: this is the HTTP API endpoint port, it’s used to send query to
+# influxdb by HTTP request
+EXPOSE 8086 
 RUN apk update
 RUN apk add vim wget openrc
 RUN apk add influxdb --no-cache
