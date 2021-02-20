@@ -1,3 +1,4 @@
 rc-status
-/bin/sh
-# sleep infinity
+# /bin/sh
+rc-service grafana restart
+sleep infinity
