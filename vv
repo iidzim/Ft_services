@@ -1,0 +1,47 @@
+#!/bin/bash
+$HOME/goinfre=$HOME/goinfre
+$HOME/.brew=$HOME/.brew
+$HOME/goinfre=$HOME/goinfre
+/goinfre/$(whoami)=/goinfre/$(whoami)
+$HOME/.brewconfig.zsh=$HOME/.brewconfig.zsh
+# Minikube paths
+$HOME/.minikube=$HOME/.minikube
+$HOME/goinfre/.minikube=$HOME/goinfre/.minikube
+# Docker paths
+$HOME/.docker=$HOME/.docker
+$HOME/goinfre/.docker=$HOME/goinfre/.docker
+# Kubernetes paths
+$HOME/.kube=$HOME/.kube
+$HOME/goinfre/.kube=$HOME/goinfre/.kube
+# Remove old tools
+rm -rf $HOME/.brew
+rm -rf $HOME/.minikube
+rm -rf $HOME/.kube
+rm -rf $HOME/.docker
+rm -rf $HOME/goinfre
+if [ ! -d "$$HOME/.brew" ]; then
+        curl -fsSL https://rawgit.com/kube/42homebrew/master/install.sh | zsh
+        ln -s /goinfre/$(whoami) $HOME/goinfre
+        cp -r $HOME/.brew $HOME/goinfre
+        sed -i "" "s|\$HOME/.brew|\HOME/goinfre/.brew|g" $HOME/.brewconfig.zsh
+        rm -rf $HOME/.brew
+        source $HOME/.brewconfig.zsh
+        brew update
+fi
+if [ ! -d $$HOME/.docker ]; then
+        brew install docker
+        brew install docker-machine
+        docker-machine create --driver virtualbox default
+        cp -r $HOME/.docker $HOME/goinfre/.docker
+        rm -rf $HOME/.docker
+        ln -s $HOME/goinfre/.docker $HOME/.docker
+fi
+if [ ! -d $$HOME/.minikube ]; then
+        brew install minikube
+        minikube start
+        cp -r $HOME/.minikube $HOME/goinfre/.minikube
+        rm -rf $HOME/.minikube
+        ln -s $HOME/goinfre/.minikube $HOME/.minikube
+        rm -rf $HOME/.kube
+        ln -s $HOME/goinfre/.kube $HOME/.kube
+fi
