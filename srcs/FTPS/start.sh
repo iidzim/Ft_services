@@ -1,4 +1,4 @@
 rc-status
-rc-service vsftpd reetart
+rc-service vsftpd restart
 # /bin/sh
 sleep infinity
