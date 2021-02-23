@@ -37,6 +37,6 @@ spec:
     protocol: TCP
     port: 3306
     targetPort: 3306
-  type: ClusterIP
+  # type: ClusterIP
   ClusterIP: 10.104.173.197
 

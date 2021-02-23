@@ -16,8 +16,8 @@ spec:
         image: ftps
         resources:
           limits:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "256Mi"
+            cpu: "700m"
         ports:
         - containerPort: 21
 ---

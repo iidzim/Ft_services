@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: influxdb
-        image: influxDB
+        image: influxdb
         imagePullPolicy: Never
         resources:
           limits:
@@ -35,5 +35,5 @@ spec:
     protocol: TCP
     port: 8086
     targetPort: 8086
-  type: ClusterIP
+  # type: ClusterIP
   ClusterIP: 10.104.173.197
