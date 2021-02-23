@@ -9,6 +9,7 @@ RUN rm -rf phpMyAdmin-4.9.0.1-english.tar.gz
 RUN mv phpMyAdmin-4.9.0.1-english phpmyadmin
 RUN cp -rf phpmyadmin /var/www/html/
 COPY ./default.conf /etc/nginx/conf.d/default.conf
+COPY ./config.sample.inc.php /var/www/html/
 RUN mkdir -p /run/openrc/
 RUN touch /run/openrc/softlevel
 COPY start.sh /

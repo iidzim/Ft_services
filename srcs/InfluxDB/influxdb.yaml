@@ -35,5 +35,5 @@ spec:
     protocol: TCP
     port: 8086
     targetPort: 8086
-  # type: ClusterIP
-  ClusterIP: 10.104.173.197
+  type: ClusterIP
+  clusterIP: 10.104.173.197

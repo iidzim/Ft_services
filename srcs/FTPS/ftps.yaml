@@ -1,8 +1,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ftps
+  name: ftps-deployment
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: ftps
@@ -14,9 +15,10 @@ spec:
       containers:
       - name: ftps
         image: ftps
+        imagePullPolicy: Never
         resources:
           limits:
-            memory: "256Mi"
+            memory: "128Mi"
             cpu: "700m"
         ports:
         - containerPort: 21
@@ -24,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ftps
+  name: ftps-service
   annotations:
     metallb.universe.tf/allow-shared-ip: shared
 spec:

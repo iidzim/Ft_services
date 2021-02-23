@@ -1,6 +1,6 @@
 export MINIKUBE_HOME=/goinfre/iidzim
 minikube delete
-minikube start --cpus 4 --memory 4000
+minikube start --cpus 8 --memory 4096
 eval $(minikube docker-env)
 minikube addons enable metallb
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/namespace.yaml
