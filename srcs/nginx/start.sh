@@ -7,5 +7,4 @@ echo -e "1234\n1234\n" > input
 adduser ikram < input
 rm input
 rc-service sshd restart
-# /bin/sh
 sleep infinity

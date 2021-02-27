@@ -28,7 +28,7 @@ $i++;
 /* Authentication type */
 $cfg['Servers'][$i]['auth_type'] = 'cookie';
 /* Server parameters */
-$cfg['Servers'][$i]['host'] = '10.104.173.19';
+$cfg['Servers'][$i]['host'] = '10.104.173.197';
 $cfg['Servers'][$i]['compress'] = false;
 $cfg['Servers'][$i]['AllowNoPassword'] = false;
 
@@ -71,8 +71,9 @@ $cfg['Servers'][$i]['AllowNoPassword'] = false;
 /**
  * Directories for saving/loading files from server
  */
-// $cfg['UploadDir'] = '';
-// $cfg['SaveDir'] = '';
+$cfg['UploadDir'] = '';
+$cfg['SaveDir'] = '';
+$cfg['TempDir'] = '/tmp';
 
 /**
  * Whether to display icons or text or both icons and text in table row

@@ -29,7 +29,7 @@ define( 'DB_USER', 'ikram' );
 define( 'DB_PASSWORD', '1234' );
 
 /** MySQL hostname */
-define( 'DB_HOST', '10.104.173.19' );  # clusterIp
+define( 'DB_HOST', '10.104.173.197' );  # clusterIp
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );

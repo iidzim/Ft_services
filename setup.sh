@@ -1,5 +1,5 @@
 export MINIKUBE_HOME=/goinfre/iidzim
-# minikube delete
+minikube delete
 minikube start --cpus 4 --memory 4096
 eval $(minikube docker-env)
 minikube addons enable metallb

@@ -16,10 +16,6 @@ spec:
       - name: grafana
         image: grafana
         imagePullPolicy: Never
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
         ports:
         - containerPort: 3000
 ---

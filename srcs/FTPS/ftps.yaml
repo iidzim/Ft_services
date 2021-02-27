@@ -16,12 +16,8 @@ spec:
       - name: ftps
         image: ftps
         imagePullPolicy: Never
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "700m"
         ports:
-        - containerPort: 21
+        - containerPort: 21 #add more port to transfert data <range>
 ---
 apiVersion: v1
 kind: Service
