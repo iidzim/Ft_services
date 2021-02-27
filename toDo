@@ -133,3 +133,12 @@ how to fix it ?
  kubectl delete -f srcs/phpmyadmin
  kubectl delete -f srcs/mySQL
  
+
+  minikube delete --all --purge
+🔥  Deleting "minikube" in virtualbox ...
+💀  Removed all traces of the "minikube" cluster.
+🔥  Successfully deleted all profiles
+💀  Successfully purged minikube directory located at - [/Users/iidzim/.minikube]
+E0227 12:30:27.486050   25621 audit.go:59] unable to open 
+/Users/iidzim/.minikube/logs/audit.json: 
+open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
