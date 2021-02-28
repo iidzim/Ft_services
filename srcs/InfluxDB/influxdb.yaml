@@ -32,4 +32,4 @@ spec:
     port: 8086
     targetPort: 8086
   type: ClusterIP
-  clusterIP: 10.104.173.197
+  clusterIP: 10.104.173.198

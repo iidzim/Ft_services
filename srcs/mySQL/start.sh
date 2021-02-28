@@ -13,3 +13,5 @@ mysql < /phpmyadmin.sql
 rc-service mariadb restart
 # /bin/sh
 sleep infinity
+
+# wordpress pwd : v)IqIEStDmZ3%F)oJf
