@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: nginx
 spec:     #specification dor deployment 
   replicas: 1
   selector:   #The .spec.selector field defines how the Deployment finds which Pods to manage
