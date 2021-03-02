@@ -142,3 +142,49 @@ how to fix it ?
 E0227 12:30:27.486050   25621 audit.go:59] unable to open 
 /Users/iidzim/.minikube/logs/audit.json: 
 open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
+
+  941  eval $(minikube docker-env) \n
+  942  docker build -t nginx .
+  943  kubectl apply -f nginx.yaml
+  944  cd ..
+  945  cd InfluxDB
+  946  docker build -t influxdb .
+  947  kubectl apply -f influxdb.yaml
+  948  kubectl get pods
+  949  kubectl get all
+  950  pwd
+  951  kubectl delete -f ../nginx/nginx.yaml
+  952  kubectl apply -f ../nginx/nginx.yaml
+  953  kubectl get all
+  954  cat ../../setup.sh
+  955  ../../setup.sh
+  956  minikube delete
+  957  ../../setup.sh
+  958  eval $(minikube docker-env) \n
+  959  docker images
+  960  cd ../../
+  961  ./setup.sh
+  962  kubectl get all
+  963  kubectl get pods
+  964  kubectl exec -it influxdb-54df79f6bb-n5c24 --sh
+  965  kubectl exec -it influxdb-54df79f6bb-n5c24 -- sh
+  966  minikube dashboard &
+  967  kubectl delete -f srcs/nginx/nginx.yaml
+  968  kubectl delete -f srcs/InfluxDB/influxdb.yaml
+  969  docker images
+  970  docker rmi influxdb nginx
+  971  docker images
+  972  docker rmi influxdb -f
+  973  docker images
+  974  docker build -t nginx ./srcs/nginx/
+  975  docker build -t influxdb ./srcs/influxdb/
+  976  kubectl apply -f srcs/InfluxDB/influxdb.yaml
+  977  kubectl apply -f srcs/nginx/nginx.yaml
+  978  kubectl het all
+  979  kubectl get all
+  980  minikube dashboard
+  981  kubectl get pds
+  982  kubectl get pods
+  983  kubectl exec -it influxdb-54df79f6bb-g6cmt -- sh
+  984  kubectl exec -it influxdb-54df79f6bb-g6cmt -- influx
+  985  kubectl get pods

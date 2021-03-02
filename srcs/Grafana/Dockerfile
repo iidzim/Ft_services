@@ -10,7 +10,8 @@ RUN cp -rf grafana  /var/lib/
 
 #telegraf
 RUN apk add telegraf --no-cache --repository http://dl-2.alpinelinux.org/alpine/edge/community
-COPY ./telegraf.conf /etc/
+RUN mkdir -p /etc/telegraf/
+COPY ./telegraf.conf /etc/telegraf/telegraf.conf
 
 COPY start.sh /
 CMD ["sh", "start.sh"]
