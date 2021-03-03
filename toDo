@@ -188,3 +188,7 @@ open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
   983  kubectl exec -it influxdb-54df79f6bb-g6cmt -- sh
   984  kubectl exec -it influxdb-54df79f6bb-g6cmt -- influx
   985  kubectl get pods
+
+  kubectl get all
+  kubectl exec -it <pod name-id> -- sh
+  kubectl exec -it influxdb-54df79f6bb-g6cmt -- influx
