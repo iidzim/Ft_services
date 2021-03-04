@@ -192,3 +192,7 @@ open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
   kubectl get all
   kubectl exec -it <pod name-id> -- sh
   kubectl exec -it influxdb-54df79f6bb-g6cmt -- influx
+
+  livenessprob
+  Grafana - dashboard (export databases)
+  ftps - fileZila
