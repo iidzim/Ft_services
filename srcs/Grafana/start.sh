@@ -1,5 +1,5 @@
 rc-status
 # /bin/sh
-rc-service grafana restart
+/grafana/bin/grafana-server
 /usr/bin/telegraf
 sleep infinity

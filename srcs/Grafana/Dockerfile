@@ -6,7 +6,7 @@ RUN wget https://dl.grafana.com/oss/release/grafana-6.5.0.linux-amd64.tar.gz
 RUN tar -zxvf grafana-6.5.0.linux-amd64.tar.gz
 RUN rm -rf grafana-6.5.0.linux-amd64.tar.gz
 RUN mv grafana-6.5.0 grafana
-RUN cp -rf grafana  /var/lib/
+# RUN cp -rf grafana  /var/lib/
 
 #telegraf
 RUN apk add telegraf --no-cache --repository http://dl-2.alpinelinux.org/alpine/edge/community

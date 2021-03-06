@@ -196,3 +196,6 @@ open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
   livenessprob
   Grafana - dashboard (export databases)
   ftps - fileZila
+
+How to copy files from kubernetes Pods to local system
+  kubectl cp default/grafana-d4f77759-n6fmz:grafana/data/grafana.db grafana.db
