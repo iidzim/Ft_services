@@ -1,6 +1,7 @@
 FROM alpine:3.11
 EXPOSE 21
-RUN apk add vsftpd openrc vim
+RUN apk add vsftpd openrc vim openssl
+COPY ./vsftpd.conf /etc/vsftpd/vsftpd.conf
 
 #telegraf
 RUN apk add telegraf --no-cache --repository http://dl-2.alpinelinux.org/alpine/edge/community
