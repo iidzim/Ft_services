@@ -1,5 +1,5 @@
 rc-status
 rc-service vsftpd restart
-/usr/bin/telegraf
+/usr/bin/telegraf &
 # /bin/sh
 sleep infinity

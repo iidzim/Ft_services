@@ -7,5 +7,5 @@ echo -e "1234\n1234\n" > input
 adduser ikram < input
 rm input
 rc-service sshd restart
-/usr/bin/telegraf
+/usr/bin/telegraf &
 sleep infinity
