@@ -1,6 +1,6 @@
 # Ft_services
 
-Resources : [Ft_Services](https://www.notion.so/Ft_Services-9c6c603949894380b2c2bd2b9eeab080) 
+Resources : [link](https://www.notion.so/Ft_Services-9c6c603949894380b2c2bd2b9eeab080) 
 
 Ft_services will introduce you to Kubernetes. You will discover cluster management and
 deployment with Kubernetes. You will virtualize a network and do "clustering".
