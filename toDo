@@ -194,7 +194,7 @@ open /Users/iidzim/.minikube/logs/audit.json: no such file or directory
   kubectl exec -it influxdb-54df79f6bb-g6cmt -- influx
 
   livenessprob
-  Grafana - dashboard (export databases)
+  Grafana - dashboard (export databases) √
   ftps - fileZila
 
 How to copy files from kubernetes Pods to local system
