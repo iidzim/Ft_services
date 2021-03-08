@@ -18,7 +18,14 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 5050
-
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - healthy.sh
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          timeoutSeconds: 10
 ---
 
 apiVersion: v1

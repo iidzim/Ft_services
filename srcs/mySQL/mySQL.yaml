@@ -18,6 +18,13 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 3306
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - healthy.sh
+          initialDelaySeconds: 30
+          periodSeconds: 30
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: mysql
@@ -25,6 +32,7 @@ spec:
       - name: mysql
         persistentVolumeClaim:
           claimName: mysql
+        
 
 ---
 

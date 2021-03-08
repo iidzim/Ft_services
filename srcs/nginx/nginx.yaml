@@ -24,6 +24,13 @@ spec:     #specification dor deployment
         - containerPort: 80 #http
         - containerPort: 443 #https
         - containerPort: 22 #ssh
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - healthy.sh
+          initialDelaySeconds: 30
+          periodSeconds: 30
 
 ---
 

@@ -18,6 +18,13 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 8086
+        livenessProbe:
+          exec:
+            command:
+            - sh
+            - healthy.sh
+          initialDelaySeconds: 30
+          periodSeconds: 30 
         volumeMounts:
         - mountPath: /root/.influxdb
           name: influxdb
@@ -25,6 +32,7 @@ spec:
       - name: influxdb
         persistentVolumeClaim:
           claimName: influxdb
+      
 ---
 apiVersion: v1
 kind: Service
