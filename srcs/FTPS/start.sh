@@ -4,10 +4,11 @@ openssl req -newkey rsa:2048 -new -nodes -x509 -days 365 -keyout /etc/ssl/privat
 rm input
 rc-status
 echo -e "1234\n1234\n" > input
-adduser ikram < input
+adduser -D 'ikram' < input
 rm input
-rc-service vsftpd restart
+echo "ikram:1234" | chpasswd
 /usr/bin/telegraf &
+/usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf &
 # /bin/sh
 sleep infinity
 
