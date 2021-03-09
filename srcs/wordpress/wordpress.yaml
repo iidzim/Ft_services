@@ -21,11 +21,10 @@ spec:
         livenessProbe:
           exec:
             command:
-            - sh
+            - /bin/sh
             - healthy.sh
-          initialDelaySeconds: 30
-          periodSeconds: 30
-          timeoutSeconds: 10
+          initialDelaySeconds: 20
+          periodSeconds: 10
 ---
 
 apiVersion: v1

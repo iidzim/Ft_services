@@ -29,8 +29,8 @@ spec:     #specification dor deployment
             command:
             - sh
             - healthy.sh
-          initialDelaySeconds: 30
-          periodSeconds: 30
+          initialDelaySeconds: 15
+          periodSeconds: 5
 
 ---
 
