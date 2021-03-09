@@ -1,11 +1,14 @@
 #!/bin/sh
 pgrep nginx 
-$n = $?
+n=$?
 pgrep sshd
-$s = $?
+s=$?
 pgrep telegraf
-$t = $?
+t=$?
 
-if [ $n -ne 0 -a $s -ne 0 -a $t -ne 0 ]; then
-  exit 1
+if [ $n -ne 0 -o $s -ne 0 -o $t -ne 0 ];
+then
+  return 1
+else
+  return 0
 fi

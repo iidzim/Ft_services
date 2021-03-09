@@ -1,17 +1,14 @@
 #!/bin/sh
 pgrep nginx
-N=$?
+n=$?
 pgrep php-fpm
-P=$?
+p=$?
 pgrep telegraf
-T=$?
+t=$?
 
-if [ $N -ne 0 -o $P -ne 0 -o $T -ne 0 ];
+if [ $n -ne 0 -o $p -ne 0 -o $t -ne 0 ];
 then
   return 1
 else
   return 0
 fi
-# if [ $n -ne 0 ]; then
-#   exit $n
-# fi

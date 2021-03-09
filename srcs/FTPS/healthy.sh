@@ -1,9 +1,12 @@
 #!/bin/sh
 pgrep vsftpd 
-$v = $?
+v=$?
 pgrep telegraf
-$t = $?
+t=$?
 
-if [ $v -ne 0 -a $t -ne 0 ]; then
-  exit 1
+if [ $v -ne 0 -o $t -ne 0 ];
+then
+  return 1
+else
+  return 0
 fi
