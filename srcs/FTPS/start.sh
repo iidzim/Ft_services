@@ -9,6 +9,4 @@ rm input
 echo "ikram:1234" | chpasswd
 /usr/bin/telegraf &
 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf &
-# /bin/sh
 sleep infinity
-

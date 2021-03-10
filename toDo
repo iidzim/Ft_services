@@ -204,6 +204,14 @@ kubectl describe pods <pod-name>
 -----------toDo !!!!!
 add user1/ 2
 
+-------------------
+#kill.sh
 #!bin/bash
 #use deployement name as first arguments and process name as a second
 kubectl exec deploy/$1 -- pkill $2
+-------------------
+#restart.sh
+#!/bin/bash
+kubectl delete -f ./srcs/$1/$1.yaml
+docker build -t $1 ./srcs/$1
+kubectl apply -f ./srcs/$1/$1.yaml
