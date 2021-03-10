@@ -12,5 +12,4 @@ mysql < /phpmyadmin.sql
 
 rc-service mariadb restart
 /usr/bin/telegraf &
-# /bin/sh
 sleep infinity

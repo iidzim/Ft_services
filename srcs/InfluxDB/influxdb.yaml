@@ -23,7 +23,7 @@ spec:
             command:
             - sh
             - healthy.sh
-          initialDelaySeconds: 15
+          initialDelaySeconds: 20
           periodSeconds: 5
         volumeMounts:
         - mountPath: /root/.influxdb
@@ -57,7 +57,7 @@ metadata:
 spec:
   resources:
     requests:
-      storage: 10Gi
+      storage: 2Gi
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce

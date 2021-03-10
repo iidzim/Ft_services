@@ -24,7 +24,7 @@ spec:
             - /bin/sh
             - healthy.sh
           initialDelaySeconds: 20
-          periodSeconds: 10
+          periodSeconds: 5
 ---
 
 apiVersion: v1

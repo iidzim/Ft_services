@@ -6,7 +6,7 @@ t=$?
 
 if [ $v -ne 0 -o $t -ne 0 ];
 then
-  return 1
+  exit 1
 else
-  return 0
+  exit 0
 fi

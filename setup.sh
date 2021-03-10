@@ -3,8 +3,6 @@ minikube delete
 minikube start --cpus 4 --memory 4096
 eval $(minikube docker-env)
 minikube addons enable metallb
-# kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/namespace.yaml
-# kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.9.5/manifests/metallb.yaml
 kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
 
 

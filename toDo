@@ -201,3 +201,9 @@ How to copy files from kubernetes Pods to local system
   kubectl cp default/grafana-d4f77759-n6fmz:grafana/data/grafana.db grafana.db
 
 kubectl describe pods <pod-name>
+-----------toDo !!!!!
+add user1/ 2
+
+#!bin/bash
+#use deployement name as first arguments and process name as a second
+kubectl exec deploy/$1 -- pkill $2
