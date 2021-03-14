@@ -1,10 +1,8 @@
-export MINIKUBE_HOME=/goinfre/iidzim
 minikube delete
-minikube start --cpus 4 --memory 4096
+minikube start
 eval $(minikube docker-env)
 minikube addons enable metallb
 kubectl create secret generic -n metallb-system memberlist --from-literal=secretkey="$(openssl rand -base64 128)"
-
 
 docker build -t nginx ./srcs/nginx/
 docker build -t phpmyadmin ./srcs/phpmyadmin/

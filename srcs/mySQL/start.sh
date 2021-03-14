@@ -1,6 +1,6 @@
+rc-status
 touch /run/openrc/softlevel
 /etc/init.d/mariadb setup
-rc-status
 rc-service mariadb restart
 
 mysql -e "CREATE USER 'ikram'@'%' IDENTIFIED BY '1234';" 
